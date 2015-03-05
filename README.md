@@ -4,6 +4,8 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
+Heroku-approved app name is yumekia-bloccit. To https://git.heroku.com/yumekia-bloccit.git.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
