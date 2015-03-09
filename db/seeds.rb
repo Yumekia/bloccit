@@ -15,7 +15,7 @@
      post: posts.sample,
      body: Faker::Lorem.paragraph
    )
- end
+ end	
  
  puts "Seed finished"
  puts "#{Post.count} posts created"
