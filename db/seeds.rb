@@ -20,8 +20,8 @@
  #Create Advertisements
  20.times do
  	Advertisement.create!(
- 		title: Faker::Company.name
- 		copy: Faker::Commerce.product_name
+ 		title: Faker::Company.name,
+ 		copy: Faker::Commerce.product_name,
  		price: Faker::Commerce.price
  		)
  end
