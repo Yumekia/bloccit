@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+   
+  skip_before_action :require_login, only: [:index, :new]
+end
+
   def index
     @posts = Post.all
   end
