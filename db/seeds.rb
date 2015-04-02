@@ -49,6 +49,15 @@
    )
  end	
  
+ #Create Summary
+  6.times do
+    Summary.create!(
+      new_post: Faker::Lorem.sentence,
+      body:  Faker::Lorem.paragraph
+      )
+  end
+  summaries = Summary.all
+
   # Create an admin user
  admin = User.new(
    name:     'Admin User',
@@ -80,6 +89,7 @@
 
 
  puts "Seed finished"
+ puts "#{Summary.count} summaries created"
  puts "#{User.count} users created"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
