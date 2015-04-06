@@ -9,6 +9,10 @@
        </ul>
      </div>
    <% end %>
+     <small>
+         <%= image_tag(@post.image.tiny.url) if @post.image? %>
+         <%=@post.title %>
+    </small>
    <%= form_group_tag(post.errors[:title]) do %>
      <%= f.label :title %>
      <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>

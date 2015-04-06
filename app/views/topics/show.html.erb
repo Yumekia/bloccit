@@ -15,9 +15,15 @@
            </h4>
             <small>
               <%= image_tag(post.user.avatar.tiny.url) if post.user.avatar? %>
-              submitted <%= time_ago_in_words(post.created_at) %> ago by <%=                           post.user.name %>  <br/>
+              submitted <%= time_ago_in_words(post.created_at) %> ago by 
+              <%= post.user.name %><br/>
               <%= post.comments.count %> Comments
             </small>
+           <small>
+             <%= image_tag(post.image.tiny.url) if post.image? %>
+             submitted <%= time_ago_in_words(post.created_at) %> ago by                                    <%= post.title %><br/>
+             <%= post.comments.count %> Comments
+           </small>
          </div>
        </div>
      <% end %>
