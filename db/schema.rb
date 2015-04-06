@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324021827) do
+ActiveRecord::Schema.define(version: 20150403173407) do
 
   create_table "advertisements", force: :cascade do |t|
     t.string   "title"
     t.text     "copy"
     t.integer  "price"
+    t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150324021827) do
 
   create_table "summaries", force: :cascade do |t|
     t.text     "body"
+    t.string   "new_post"
     t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -78,6 +80,7 @@ ActiveRecord::Schema.define(version: 20150324021827) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "role"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -3,7 +3,14 @@ class PostsController < ApplicationController
   def show
  #   @summary = Summary.find(params[:topic_id])
   	@topic = Topic.find(params[:topic_id])
+  
     @post = Post.find(params[:id])
+    if @post.summary.blank?
+      @summary = @post.build_summary
+      @summary.save
+    else
+      @summary = @post.summary
+    end
   end
 
   def new
