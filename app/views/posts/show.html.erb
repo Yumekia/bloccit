@@ -9,12 +9,23 @@
        </small>
     <p><%= markdown_to_html @post.body %></p>
   </div>
-  <div class="col-md-4">
-    
+  <div class="col-md-4">  
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success'  
        %>
     <% end %>
+  </div>
+</div>  
+  <p><%= @post.body %></p>
 
-<p><%= @post.body %></p>
+<br/>
+
+<div class="row">
+  <h2>Comments</h2>
+  <div class='col-md-12'>
+    <%= render @comments %>
+    <%= render 'comments/form', topic: @topic, comment: @comment, post: @post %>
+  </div>
+</div>
+
 
