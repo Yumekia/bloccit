@@ -28,4 +28,9 @@
   </div>
 </div>
 
-
+  <div class="col-md-4">
+    <% if policy(@comment).new? %>
+      <%= link_to "New Comment", new_topic_post_path(@topic, @post), class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

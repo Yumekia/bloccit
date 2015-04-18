@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+http_basic_authenticate_with :name => "dhh", :password => "secret", :except => [:index, :show]  
+  
   def create
     @topic = Topic.find(params[:topic_id])
     @post = @topic.posts.find(params[:post_id])

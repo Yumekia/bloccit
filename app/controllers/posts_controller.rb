@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
     
+ http_basic_authenticate_with :name => "dhh", :password => "secret", :except => [:index, :show]
+  
   def show
   	@topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
