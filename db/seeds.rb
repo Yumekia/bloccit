@@ -32,8 +32,8 @@
  # Create Posts
  50.times do
    post = Post.create!(
-        user:   users.sample,
-          topic:  topics.sample, 
+     user:   users.sample,
+     topic:  topics.sample, 
      title:  Faker::Lorem.sentence,
      body:   Faker::Lorem.paragraph
    )
